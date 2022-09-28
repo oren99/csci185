@@ -1,0 +1,205 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    height: 100vh;
+    /* body tag is a grid */
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+}
+
+
+aside {
+    background-color: #000;
+    grid-column-start: 1;
+   
+}
+aside a {
+    padding: 8px;
+}
+i { padding-right: 9px;}
+
+header {
+    background: #111;
+    position: sticky;
+    top: 0px;
+}
+
+/* Uncomment to see borders:  */
+/* header, nav, article {
+    border: solid 5px teal;
+    padding: 10px;
+}
+main {
+    border: solid 5px hotpink;
+    padding: 10px;
+} */
+
+main {
+    background: #111;
+    grid-column-start: 2;
+    overflow-y: auto;
+    z-index: 3;
+}
+
+footer {
+    background: #222;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+/* Your Code Here */
+
+
+header {
+   
+    display: grid;
+    grid-template-columns: 70% 10% 10%;
+    column-gap: 15px;
+    margin-top: 20px;
+}
+
+#upgrade {
+    grid-column-start: 2;
+    border: #b3b3b3 solid 1px;
+    border-radius: 25px;
+    padding: 4px;
+    text-align: center;
+}
+
+#profile {
+    background-color: #212121;
+    border-radius: 25px;
+    padding: 4px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+ nav a {
+    padding: 10px;
+ }
+
+ article {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   align-content: space-around;
+   padding: 10px;
+ }
+
+.artist-card {
+
+    width: 18%;
+    padding: 8px 8px 30px 8px;
+    margin:2vh;
+    background-color: #212121;
+    border: #212121 solid 1px;
+    border-radius: 6%;
+    line-height: .8;
+    font-size: 10pt;
+    
+}
+/* section div {
+    display: flex;
+    align-content: center;
+} */
+
+img {
+    height: auto;
+    max-width: 90%;
+    border-radius: 100%;
+    
+}
+
+
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+/* Your Code Here */
+
+@media screen and (max-width: 1000px) {
+    .artist-card { 
+    width: 28%;
+    min-height: auto;   
+    padding: 8px 8px 20px 8px;
+    margin:2vh;
+    border-radius: 6%;
+    line-height: 1;
+    font-size: 8pt;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    aside {
+        display: none;
+    }
+    main {
+        background: #111;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        overflow-y: auto;
+    }
+    
+    .artist-card { 
+        width: 45%;
+        min-height: auto;   
+        padding: 8px 8px 20px 8px;
+        margin:2vh;
+        border-radius: 6%;
+        line-height: 1;
+        font-size: 8pt;
+        }
+}
+
+

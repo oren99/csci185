@@ -36,6 +36,19 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-    /* Your code here! */
+    header {
+        background-color: crimson;
+        height: 10vh;
+        color: white;
+    }
+
+    main {
+        background-color: ivory;
+        height: 80vh;
+    }
+    footer {
+        background-color: #333;
+        color: white;
+    }
 }
 

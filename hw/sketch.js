@@ -9,13 +9,12 @@ const c1 = {
     speed: 8,
     color: 'hotpink'
 };
-
 const c2 = {
-    x: 1500,
+    x: 1300,
     y: 300,
     width: 200,
     speed: 8,
-    color: 'teal'
+    color:'orange'
 };
 
 
@@ -32,22 +31,23 @@ function draw() {
 
     // move the car:
     c1.x += c1.speed;
+
     c2.x -= c2.speed;
 
     // redraw the car:
     drawCar(c1.x, c1.y, c1.width, c1.color);
-    drawCar(c2.x, c2.y, c2.width, c2.color);
+
+    drawCar(c2.x,c2.y,c2.width,c2.color);
+    
+    drawGrid(canvasWidth, canvasHeight);
+
     if (c1.x > window.innerWidth + 100) {
         c1.x = 100
     }
     if (c2.x < 0 - 100) {
         c2.x = window.innerWidth - 100
     }
-    
-    // draw the grid (optional -- feel free to remove this line):
-    drawGrid(canvasWidth, canvasHeight);
 }
-
 
 function drawCar(x, y, size, fillColor, wheelColor='black') {
     strokeWeight(0);
@@ -61,4 +61,5 @@ function drawCar(x, y, size, fillColor, wheelColor='black') {
     fill(wheelColor);
     circle(x - size / 4, y, size / 6);
     circle(x + size / 4, y, size / 6);
+
 }

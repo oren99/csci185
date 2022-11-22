@@ -1,0 +1,116 @@
+ 
+* {
+  margin: .2vh;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  max-width: 100%;
+  
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows:  5fr;
+
+  margin: 0px;
+}
+
+h1, a {
+  text-align: right;
+  font-size: 3em;
+  font-weight: 900;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(2, 17, 18);
+  margin-bottom: .2em;
+  text-decoration: none;
+  grid-column: 2;
+  display: flex;
+  justify-items: center;
+}
+
+
+/* #peach   {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  height: auto;
+  min-height: auto;
+  background-color: rgb(255, 253, 127);
+  box-sizing: border-box;
+}
+
+#plum {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  height: auto;
+  min-height: auto;
+  background-color: aquamarine;
+  box-sizing: border-box;
+}
+
+#apricot {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  height: auto;
+  min-height: auto;
+  background-color: rgb(255, 127, 131);
+  box-sizing: border-box;
+} */ 
+
+/* img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 30%;
+  padding: 1px;
+} */
+.plum {
+grid-row-start: 1;
+
+}
+ 
+div.apricot {
+  grid-row-start: 1;
+}
+
+div.worm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.plum .plumpit {
+  display: flex;
+  flex-direction: row;
+}
+
+  .worm #a {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  width: 100%;
+} 
+
+#b {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+#c {
+  grid-column-start: 3;
+  grid-column-end: 4;
+} 
+
+img {
+  max-width: 100%;
+}
+
+#apple {
+  grid-column-start: 4;
+  grid-row-start: auto;
+  text-align: right;
+}

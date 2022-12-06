@@ -1,0 +1,151 @@
+@font-face {
+  font-family: fillmorecustom;
+  src:url("fillmore.TTF");
+} 
+
+@font-face {
+  font-family: citonl;
+  src:url("citonl.ttf")
+}
+
+
+* {
+  margin: .2vh;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  max-width: 100%;
+  
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows:  5fr;
+
+  margin: 0px;
+}
+
+h1, a {
+  text-align: right;
+  font-size: 3em;
+  font-weight: 900;
+  font-family: fillmorecustom;
+  color: rgb(40, 25, 25);
+  margin-bottom: .2em;
+  text-decoration: none;
+  grid-column: 2;
+  display: flex;
+  justify-items: center;
+}
+
+h1 {
+  font-size: 50pt;
+  
+}
+
+p {
+  font-family: citonl;
+}
+ul {
+  font-family: citonl;
+}
+
+ #peach   {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: auto;
+  min-height: 100vh;
+  background-color: rgb(255, 253, 127);
+  box-sizing: border-box;
+}
+
+.plum {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  height: auto;
+  min-height: 100vh;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+
+
+#apricot {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  height: auto;
+  min-height: 100vh;
+  background-color: white;
+  box-sizing: border-box;
+  
+} 
+
+#meow {
+  display: flex;
+  justify-content: center;
+}
+ 
+
+div.worm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.plum .plumpit {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  background-color: rgb(255, 127, 131);
+}
+
+img {
+  max-width: 100%;
+  cursor: pointer;
+  padding: 4px;
+}
+
+#profile {
+  max-width: 85%;
+  padding-left: 860px;
+  
+}
+
+#apple {
+  grid-column-start: 4;
+  grid-row-start: auto;
+  text-align: right;
+}
+
+#apricot {
+  grid-column-start: 1;
+}
+
+
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-height: 80%;
+  border: 20px rgb(40, 25, 25) solid;
+}
